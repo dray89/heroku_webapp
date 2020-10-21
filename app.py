@@ -10,7 +10,7 @@ if ENV== 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/databasename'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] ='postgres://dpnsjvnfohxnbe:0d696bcfe4f2ddbb7c668e81176495b4f0204aafbaf6e3483d7da373082e80e1@ec2-23-22-156-110.compute-1.amazonaws.com:5432/d4pb7s5vdspj5m'
+    app.config['SQLALCHEMY_DATABASE_URI'] = open('psql_db.txt').read()
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
